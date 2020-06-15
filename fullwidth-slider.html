@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+.mySlides img {
+  vertical-align: middle;
+  height:90vh;
+  mix-blend-mode: exclusion;
+ }
+.mySlides::before{
+  background-color: #022760;  
+  content: '';
+  display: block;
+  height: 90vh;
+  position:absolute;
+  width: 100%;
+}
+/* Slideshow container */
+.slideshow-container {
+  
+  position: relative;
+  margin-bottom: -20px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 0 10%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  width: 100%;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .text {
+     top:40%;
+}
+}
+.dots{
+position:relative;
+text-align:center;
+bottom:30px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: .7s;
+  animation-name: fade;
+  animation-duration: .7s;
+}
+
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.icon-scroll{
+  
+}
+.icon-scroll span{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  margin-left: -11px;
+  margin-top: -50px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb07 1.5s infinite;
+  animation: sdb07 1.5s infinite;
+  opacity: 0;
+  box-sizing: border-box;
+}
+.icon-scroll span:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.icon-scroll span:nth-of-type(2) {
+  top: 12px;
+  -webkit-animation-delay: .15s;
+  animation-delay: .15s;
+}
+.icon-scroll span:nth-of-type(3) {
+  top: 24px;
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
+}
+@-webkit-keyframes sdb07 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb07 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.down-part{
+  height:1000px;
+  background-color:lightgray;
+}
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%">
+  <div class="text">
+  <h2>INTELLIGENTES WORKFORCE MANAGEMENT</h2>
+  <p>Hays Talent Solutions bietet Ihnen ein umfassendes Leistungsportfolio, vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+  </div>
+</div>
+
+<div class="mySlides fade">
+  <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%">
+  <div class="text">
+    <h2>INTELLIGENTES WORKFORCE MANAGEMENT</h2>
+    <p>Hays Talent Solutions bietet Ihnen ein umfassendes Leistungsportfolio, vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+    </div>
+</div>
+
+<div class="mySlides fade">
+  <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%">
+  <div class="text">
+    <h2>INTELLIGENTES WORKFORCE MANAGEMENT</h2>
+    <p>Hays Talent Solutions bietet Ihnen ein umfassendes Leistungsportfolio, vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+    </div>
+</div>
+<div class="dots" style="text-align:center">
+  <a style="cursor:pointer" onclick="scrollDown()"><div class='icon-scroll'><span></span><span></span></div></a>
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+</div>
+
+<div class="down-part"></div>
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function scrollDown(){
+  var w = $(".mySlides img").height();
+  $('html, body').animate({ scrollTop:w}, 800, 'linear');
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
